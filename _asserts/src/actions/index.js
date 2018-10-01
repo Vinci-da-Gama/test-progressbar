@@ -18,11 +18,11 @@ export const getPbs = () => {
             if (resp) {
                 dispatch(setPbs(resp.data));
             } else {
-                console.log('21 -- ', resp);
+                alert('Please check Internet connection.');
             }
         })
         .catch((err) => {
-            console.log('25 -- ', err);
+            alert('There are some errors. Please contact Customer Service.');
         });
     };
 };
