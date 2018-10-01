@@ -64,6 +64,7 @@
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "raf": "^3.4.0",
+    "redux-mock-store": "^1.5.3",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
