@@ -4,7 +4,6 @@ import { Button } from 'reactstrap';
 import { ConstNumbers } from '../consts/Numbers';
 
 class ButtonsContainer extends Component {
-
     clickToUpdate() {
         this.props.updateBarVal(this.props.elem);
     }

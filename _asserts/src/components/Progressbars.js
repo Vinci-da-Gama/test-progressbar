@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Progress } from 'reactstrap';
 
-import ConstNumbers from '../consts/Numbers';
-
 export class Progressbars extends Component {
     renderBars() {
         return this.props.bars.map((elem, idx) => (
@@ -24,6 +22,6 @@ export class Progressbars extends Component {
             </div>
         );
     }
-};
+}
 
 export default Progressbars;

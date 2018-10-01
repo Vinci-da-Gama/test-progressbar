@@ -32,7 +32,7 @@ export class Assemblage extends Component {
     componentWillReceiveProps(nextProps) {
         const bars = nextProps.bars.map((elem, idx) => {
             return {
-                pbId: `pb${idx + 1}`,
+                pbId: `pb${idx + ConstNumbers.ONE}`,
                 val: elem
             };
         });
@@ -48,12 +48,13 @@ export class Assemblage extends Component {
 
     updateBarVal(num) {
         const allPbIds = Object.keys(this.props.bars).map((elem, idx) => {
-            return `pb${idx + 1}`;
+            return `pb${idx + ConstNumbers.ONE}`;
         });
         // const targetBar = this.state.bars.find((elem) => elem.pbId === this.state.chosenBar);
-        if (allPbIds.indexOf(this.state.chosenBar) !== -1) {
+        if (allPbIds.indexOf(this.state.chosenBar) !== ConstNumbers.MINUSONE) {
             const bars = this.state.bars.map((elem) => {
-                const newVal = (elem.val + num) < ConstNumbers.ZERO ? 0 : elem.val + num;
+                const newVal = (elem.val + num) < ConstNumbers.ZERO
+                    ? ConstNumbers.ZERO : elem.val + num;
                 if (elem.pbId === this.state.chosenBar) {
                     return {
                         pbId: elem.pbId,
@@ -108,7 +109,7 @@ export class Assemblage extends Component {
                                                 { this.props.btns.map((elem, idx) => (
                                                     <ButtonsContainer elem={elem} key={elem + idx}
                                                         updateBarVal={
-                                                            (number = 0) => {
+                                                            (number = ConstNumbers.ZERO) => {
                                                                 this.updateBarVal(number);
                                                             }
                                                         } />

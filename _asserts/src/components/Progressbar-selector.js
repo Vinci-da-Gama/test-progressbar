@@ -4,7 +4,6 @@ import { Input } from 'reactstrap';
 import Opts from './Progressbar-Opts';
 
 export class ProgressbarSelector extends Component {
-
     changeProgressbar(e) {
         this.props.selectPbById(e);
     }

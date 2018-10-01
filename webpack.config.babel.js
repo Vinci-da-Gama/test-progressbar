@@ -9,10 +9,8 @@ import CopyWebpackPlugin       from 'copy-webpack-plugin';
 import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 
 const ast = './_asserts', distDir = './dist',
-    idxSrc = `${ast}/src/`, sassLane = './_asserts/style/',
-    imgSrc = `${ast}/img`;
+    idxSrc = `${ast}/src/`, imgSrc = `${ast}/img`;
 const entryIdx = `${idxSrc}index.js`;
-const npmLifecycle = process.env.npm_lifecycle_event;
 
 const pathsToClean = [
     `${distDir}/js/`,
@@ -84,11 +82,10 @@ const commonConfig = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Progressbars',
-            template : nPath.resolve(__dirname, `${ast}/index.html`),
+            template: nPath.resolve(__dirname, `${ast}/index.html`),
             filename: '../dist/index.html',
-            // favicon: nPath.resolve(__dirname, `${ast}/img/bmp-favicon.ico`),
-            inject: false,
-            minify: true
+            favicon: nPath.resolve(__dirname, `${ast}/img/bmp-favicon.ico`),
+            inject: true
         }),
         new CopyWebpackPlugin([
             {
