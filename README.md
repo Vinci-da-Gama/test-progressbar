@@ -6,3 +6,6 @@
 2. open project folder in terminal, run yarn install or npm i
 3. run project command: npm run local
 4. Open browser, input http://localhost:8080/
+
+## Deploy to Heroku
+https://test-progressbars.herokuapp.com/

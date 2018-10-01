@@ -85,7 +85,7 @@ const commonConfig = {
             template: nPath.resolve(__dirname, `${ast}/index.html`),
             filename: '../dist/index.html',
             favicon: nPath.resolve(__dirname, `${ast}/img/bmp-favicon.ico`),
-            inject: true
+            inject: false
         }),
         new CopyWebpackPlugin([
             {
