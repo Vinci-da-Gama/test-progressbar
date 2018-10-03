@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`In route/index.js Test Routes:  should render route correctlly. 1`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+</Switch>
+`;

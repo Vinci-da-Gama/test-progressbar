@@ -1,10 +1,10 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import axios from 'axios';
+// import axios from 'axios';
 // import MockAdapter from 'axios-mock-adapter';
-import mockAxios from 'jest-mock-axios';
+// import mockAxios from 'jest-mock-axios';
 
-import pbsFixture from '../fixtures/pbs-fixtures.';
+import pbsFixture from '../fixtures/pbs-fixtures';
 import { FETCH_PROGRESSBARS } from '../../src/types';
 import * as pbsActions from '../../src/actions';
 
@@ -29,7 +29,6 @@ describe('In actions/index.js -- Async actions: ', () => {
     afterEach(() => {
         /* axiosMock.reset();
         axiosMock.restore(); */
-        mockAxios.reset();
     });
 
     test('should generate initialize progressbars data result.', () => {
@@ -62,7 +61,7 @@ describe('In actions/index.js -- Async actions: ', () => {
                         limit: expect.any(Number)
                     }
                 });
-                expect(catchSpy).not.toHaveBeenCalled();
             });
+        expect(catchSpy).not.toHaveBeenCalled();
     });
 });

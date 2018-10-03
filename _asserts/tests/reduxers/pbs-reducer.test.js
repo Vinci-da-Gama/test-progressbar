@@ -1,4 +1,4 @@
-import pbsFixture from '../fixtures/pbs-fixtures.';
+import pbsFixture from '../fixtures/pbs-fixtures';
 import { FETCH_PROGRESSBARS } from '../../src/types';
 import pbsReducer from '../../src/reduxers/reducer_progressbars';
 

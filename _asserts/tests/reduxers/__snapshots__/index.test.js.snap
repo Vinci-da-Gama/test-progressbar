@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`In reduxers/index.js Test RootRedux:  should generate Root Reducer correctly. 1`] = `<Component />`;
