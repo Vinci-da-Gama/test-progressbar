@@ -4,7 +4,7 @@ import { FETCH_PROGRESSBARS } from '../types';
 
 const rootUrl = 'https://pb-api.herokuapp.com';
 
-export const setPbs = (pbs) => (
+export const setPbs = (pbs = {}) => (
     {
         type: FETCH_PROGRESSBARS,
         pbs
