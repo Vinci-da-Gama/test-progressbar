@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`In components/Buttons.js Test Buttons:  should render Buttons correctly with data. 1`] = `
+<Button
+  className="height-3rem rounded-0 mb-2"
+  color="info"
+  onClick={[Function]}
+  outline={true}
+  tag="button"
+>
+  +
+  35
+</Button>
+`;
+
+exports[`In components/Buttons.js Test Buttons:  should render Buttons correctly without data. 1`] = `
+<Button
+  className="height-3rem rounded-0 mb-2"
+  color="info"
+  onClick={[Function]}
+  outline={true}
+  tag="button"
+/>
+`;
