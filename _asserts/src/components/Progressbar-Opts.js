@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default (props) => (
-    <option value={ props.item.pbId }>
-        {props.item.pbId}
+export const PbOpts = ({ pbId, val }) => (
+    <option value={ pbId }>
+        {pbId}
     </option>
 );

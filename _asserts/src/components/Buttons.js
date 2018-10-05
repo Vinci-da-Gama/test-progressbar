@@ -10,8 +10,10 @@ class ButtonsContainer extends Component {
 
     render() {
         return (
-            <Button outline color="info"
-                className="height-3rem rounded-0 mb-2"
+            <Button
+                className={`height-3rem rounded-0 mb-2
+                    ${this.props.hasSelectedPb !== '' ? 'btn-outline-info' : 'btn-light'}`}
+                disabled={ !this.props.hasSelectedPb }
                 onClick={ () => {
                     this.clickToUpdate();
                 } }>

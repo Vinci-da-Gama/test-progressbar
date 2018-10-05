@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`In components/Progressbar-Opts.js Test DropDown Options:  should render options correctly. 1`] = `<option />`;

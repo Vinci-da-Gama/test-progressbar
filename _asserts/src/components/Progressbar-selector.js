@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Input } from 'reactstrap';
 
-import Opts from './Progressbar-Opts';
+import { PbOpts } from './Progressbar-Opts';
 
-export class ProgressbarSelector extends Component {
+class ProgressbarSelector extends Component {
     changeProgressbar(e) {
         this.props.selectPbById(e);
     }
@@ -16,11 +16,11 @@ export class ProgressbarSelector extends Component {
                 onChange={ (event) => {
                     this.changeProgressbar(event);
                 } }>
-                <option value="default">
+                <option value="default" disabled={ this.props.hasSelectedPb !== '' }>
                     Please Select
                 </option>
                 {this.props.bars.map((item, idx) => (
-                    <Opts key={idx} item={item} />
+                    <PbOpts key={idx} {...item} />
                 ))}
             </Input>
         );

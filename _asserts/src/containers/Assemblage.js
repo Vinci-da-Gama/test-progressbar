@@ -94,6 +94,7 @@ export class Assemblage extends Component {
                                                 Select Progressbar
                                             </Label>
                                             <ProgressbarSelector bars={ this.state.bars }
+                                                hasSelectedPb={ this.state.chosenBar }
                                                 selectPbById={
                                                     (event) => {
                                                         this.selectPorgressbarById(event);
@@ -108,6 +109,7 @@ export class Assemblage extends Component {
                                             <div className="text-center equalspace-flex">
                                                 { this.props.btns.map((elem, idx) => (
                                                     <ButtonsContainer elem={elem} key={elem + idx}
+                                                        hasSelectedPb={ this.state.chosenBar }
                                                         updateBarVal={
                                                             (number = ConstNumbers.ZERO) => {
                                                                 this.updateBarVal(number);
