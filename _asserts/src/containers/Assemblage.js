@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
     Card, CardImg, CardBody,
@@ -116,6 +117,11 @@ export class Assemblage extends Component {
         );
     }
 }
+
+Assemblage.propTypes = {
+    bars: PropTypes.array,
+    chosenBar: PropTypes.string
+};
 
 const mapStateToProps = (state) => ({
     btns: state.pbs.buttons,
