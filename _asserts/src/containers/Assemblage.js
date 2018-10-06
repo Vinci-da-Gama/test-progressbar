@@ -35,14 +35,6 @@ export class Assemblage extends Component {
             bars: nextProps.bars
         });
     }
-    /* static getDerivedStateFromProps(nextProps, prevState) {
-        if (nextProps.bars !== prevState.bars) {
-            return {
-                bars: nextProps.bars
-            };
-        }
-        return null;
-    } */
 
     selectPorgressbarById(e) {
         const chosenBar = e.target.value;
@@ -53,7 +45,6 @@ export class Assemblage extends Component {
         const allPbIds = Object.keys(this.props.bars).map((elem, idx) => {
             return `pb${idx + ConstNumbers.ONE}`;
         });
-        // const targetBar = this.state.bars.find((elem) => elem.pbId === this.state.chosenBar);
         if (allPbIds.indexOf(this.state.chosenBar) !== ConstNumbers.MINUSONE) {
             const bars = this.state.bars.map((elem) => {
                 const newVal = (elem.val + num) < ConstNumbers.ZERO
@@ -83,7 +74,7 @@ export class Assemblage extends Component {
                 <div className="col-12">
                     <Card className="centered-container">
                         <CardImg top className="img-fluid w-50 mx-auto mt-3"
-                            src="../../img/bmplogo.svg" alt="logo" />
+                            src="../../img/logo.svg" alt="logo" />
                         <CardBody>
                             <TitleExplain />
                             <div className="mb-3">

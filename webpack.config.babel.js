@@ -84,7 +84,7 @@ const commonConfig = {
             title: 'Progressbars',
             template: nPath.resolve(__dirname, `${ast}/index.html`),
             filename: '../dist/index.html',
-            favicon: nPath.resolve(__dirname, `${ast}/img/bmp-favicon.ico`),
+            favicon: nPath.resolve(__dirname, `${ast}/img/favicon.ico`),
             inject: false
         }),
         new CopyWebpackPlugin([
