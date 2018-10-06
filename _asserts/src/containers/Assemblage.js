@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
     Card, CardImg, CardBody,
-    FormGroup, Label, Col, Row
+    Col, Row
 } from 'reactstrap';
 
 import { ConstNumbers } from '../consts/Numbers';
@@ -11,7 +11,7 @@ import Spinner from '../components/spinner';
 import TitleExplain from '../components/title-explain';
 import Progressbars from '../components/Progressbars';
 import ProgressbarSelector from '../components/Progressbar-selector';
-import ButtonsContainer from '../components/Buttons';
+import ButtonList from '../components/Button-list';
 
 export class Assemblage extends Component {
     constructor(props) {
@@ -99,22 +99,13 @@ export class Assemblage extends Component {
                                             }} />
                                     </Col>
                                     <Col sm={8}>
-                                        <FormGroup>
-                                            <Label for="progressbAs-select" className="text-brand">
-                                                Add or Minus
-                                            </Label>
-                                            <div className="text-center equalspace-flex">
-                                                { this.props.btns.map((elem, idx) => (
-                                                    <ButtonsContainer elem={elem} key={elem + idx}
-                                                        hasSelectedPb={ this.state.chosenBar }
-                                                        updateBarVal={
-                                                            (number = ConstNumbers.ZERO) => {
-                                                                this.updateBarVal(number);
-                                                            }
-                                                        } />
-                                                )) }
-                                            </div>
-                                        </FormGroup>
+                                        <ButtonList hasChoosen={ this.state.chosenBar }
+                                            btns={ this.props.btns }
+                                            updateBarState={
+                                                (number = ConstNumbers.ZERO) => {
+                                                    this.updateBarVal(number);
+                                                }
+                                            } />
                                     </Col>
                                 </Row>
                             </div>
