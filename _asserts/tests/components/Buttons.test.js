@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 
 import ButtonsCompo from '../../src/components/Buttons';
 import pbsFixture from '../fixtures/pbs-fixtures';
-import { pb1 } from '../fixtures/singleBarItem-fixture';
 
 describe('In components/Buttons.js Test Buttons: ', () => {
     let wrapperWithData, fixt;
@@ -25,7 +24,7 @@ describe('In components/Buttons.js Test Buttons: ', () => {
         const f1 = fixt.buttons[1];
         const updateBarSpy = jest.fn();
         const wrapperWithSpy = shallow(<ButtonsCompo elem={f1}
-            updateBarVal={updateBarSpy} hasSelectedPb={pb1} />);
+            updateBarVal={updateBarSpy} hasSelectedPb={'pb1'} />);
         const oneBtn = wrapperWithSpy.dive().find('button').hostNodes();
         oneBtn.simulate('click', { target: { f1 } });
         expect(updateBarSpy).toHaveBeenCalled();

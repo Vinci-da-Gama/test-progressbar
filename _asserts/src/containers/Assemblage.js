@@ -89,17 +89,12 @@ export class Assemblage extends Component {
                             <div className="mb-3">
                                 <Row>
                                     <Col sm={4}>
-                                        <FormGroup>
-                                            <Label for="progressbAs-select0" className="text-brand">
-                                                Select Progressbar
-                                            </Label>
-                                            <ProgressbarSelector bars={ this.state.bars }
-                                                hasSelectedPb={ this.state.chosenBar }
-                                                selectPbById={
-                                                    (event) => {
-                                                        this.selectPorgressbarById(event);
-                                                }}/>
-                                        </FormGroup>
+                                        <ProgressbarSelector bars={ this.state.bars }
+                                            hasSelectedPb={ this.state.chosenBar }
+                                            selectPbById={
+                                                (event) => {
+                                                    this.selectPorgressbarById(event);
+                                            }} />
                                     </Col>
                                     <Col sm={8}>
                                         <FormGroup>

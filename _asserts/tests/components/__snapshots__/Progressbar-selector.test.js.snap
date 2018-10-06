@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`In components/Progressbar-selector.js Test Selector:  should choose progressbar. 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "target": Object {
+          "value": "pb1",
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
 exports[`In components/Progressbar-selector.js Test Selector:  should render Progressbar-selector correctly. 1`] = `
 <Input
   bsSize="lg"
