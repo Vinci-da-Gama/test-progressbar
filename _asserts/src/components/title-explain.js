@@ -4,7 +4,7 @@ import { CardTitle, CardText } from 'reactstrap';
 export default () => (
     <div>
         <CardTitle className="text-center fz2em">
-            Progress Bar Demo
+            Progress Bar
         </CardTitle>
         <ul className="list-group list-group-flush">
             <li className="list-group-item">
