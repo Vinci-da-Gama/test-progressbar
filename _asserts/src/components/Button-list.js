@@ -3,10 +3,9 @@ import React, {
 } from 'react';
 import { FormGroup, Label } from 'reactstrap';
 
-import { ConstNumbers } from '../consts/Numbers';
 import ButtonsContainer from './Buttons';
 
-export class ButtonList extends Component {
+class ButtonList extends Component {
 	render() {
 		return (
             <FormGroup>

@@ -3,4 +3,7 @@ export const SingleBarObj = {
     val: 33
 };
 
-export const pb1 = 'pb1';
+export const RedBarArr = [{
+    pbId: 'pb5',
+    val: 200
+}];
