@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PbOpts = ({ pbId, val }) => (
+export const PbOpts = ({ pbId }) => (
     <option value={ pbId }>
         {pbId}
     </option>

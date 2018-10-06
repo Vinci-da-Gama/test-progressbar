@@ -61,7 +61,7 @@ describe('In actions/index.js -- Async actions: ', () => {
                         limit: expect.any(Number)
                     }
                 });
+                expect(catchSpy).not.toHaveBeenCalled();
             });
-        expect(catchSpy).not.toHaveBeenCalled();
     });
 });

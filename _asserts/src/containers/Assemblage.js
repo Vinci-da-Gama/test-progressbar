@@ -30,16 +30,18 @@ export class Assemblage extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        const bars = nextProps.bars.map((elem, idx) => {
-            return {
-                pbId: `pb${idx + ConstNumbers.ONE}`,
-                val: elem
-            };
-        });
         this.setState({
-            bars
+            bars: nextProps.bars
         });
     }
+    /* static getDerivedStateFromProps(nextProps, prevState) {
+        if (nextProps.bars !== prevState.bars) {
+            return {
+                bars: nextProps.bars
+            };
+        }
+        return null;
+    } */
 
     selectPorgressbarById(e) {
         const chosenBar = e.target.value;
