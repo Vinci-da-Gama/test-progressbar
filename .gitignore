@@ -10,3 +10,9 @@ dist/
 npm-debug.log
 *.txt
 sample-data.json
+
+webpack.config.babel.js
+.babelrc
+.eslintrc.json
+jest.config.json
+server.js
